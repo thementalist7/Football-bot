@@ -94,17 +94,17 @@ async def send_report(msg, text: str):
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     text = (
-        f"🏆 *Bonjour {user.first_name} !*\n\n"
-        f"Je suis votre *Super Agent Pronostics Football* ⚽🤖\n\n"
-        f"📊 Ratings Elo & Pi\\-ratings\n"
-        f"🔮 Prédictions ML calibrées\n"
-        f"💰 Détection de Value Bets\n"
-        f"⚔️ Derbies & matchs clés\n"
+        f"🏆 Bonjour {user.first_name}\n\n"
+        f"Je suis votre Super Agent Pronostics Football ⚽\n\n"
+        f"📊 Ratings Elo et Pi-ratings\n"
+        f"🔮 Predictions ML calibrees\n"
+        f"💰 Detection de Value Bets\n"
+        f"⚔️ Derbies et matchs cles\n"
         f"📈 Suivi de performances\n\n"
-        f"👇 *Choisissez une action :*"
+        f"Choisissez une action :"
     )
     await update.message.reply_text(
-        text, parse_mode=ParseMode.MARKDOWN_V2, reply_markup=kb_main()
+        text, parse_mode=ParseMode.MARKDOWN, reply_markup=kb_main()
     )
 
 async def cmd_pronostics(update: Update, context: ContextTypes.DEFAULT_TYPE):
