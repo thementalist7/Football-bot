@@ -1,0 +1,3 @@
+Nom     →  nixpacks.toml
+Contenu →  [start]
+           cmd = "python bot-1.py"
